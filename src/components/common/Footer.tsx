@@ -49,6 +49,13 @@ export default function Footer() {
 
       <div className="w-full max-w-7xl flex flex-col sm:flex-row justify-between items-center text-[8px] tracking-[0.25em] uppercase text-peach/30 gap-4">
         <span>&copy; {new Date().getFullYear()} NS Luxe Thread. All Rights Reserved.</span>
+        
+        <div className="flex gap-3">
+          <span>Credit/Debit Card</span> &middot;
+          <span>EMI</span> &middot;
+          <span>UPI</span> &middot;
+          <span>Net Banking</span>
+        </div>
       </div>
     </footer>
   );

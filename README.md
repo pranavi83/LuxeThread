@@ -17,6 +17,7 @@ A premium couture and editorial fashion boutique specializing in bespoke handcra
   - **Clothing Bouquet**: An interactive, step-by-step customizer for assembling a bespoke ensemble with dynamic pricing.
   - **Digital Atelier**: A virtual sizing interface that simulates an AI-driven anatomical scan for precise measurements.
   - **Digital Product Passport (DPP)**: A provenance modal that details the garment lifecycle, fabric sourcing, and artisan craftsmanship hours with an authentic NS emblem.
+- **Localized Payments**: Display of India-specific payment methods including Credit Card, Debit Card, EMI, UPI, and Net Banking.
 - **SEO Optimized**: Fully integrated with Next.js dynamic `generateMetadata`, auto-generated XML sitemap, `robots.txt`, and rich structured data schemas (JSON-LD) for Products, Breadcrumbs, and Organization.
 - **Server/Client Architecture**: Optimized component splitting for maximum performance, with interactive elements isolated in Client Components (`'use client'`) and heavy lifting done by Server Components.
 - **Responsive Design**: Flawlessly adapts across all device sizes.
@@ -24,6 +25,7 @@ A premium couture and editorial fashion boutique specializing in bespoke handcra
 
 ## Recent Updates
 
+- **Checkout & Footer Enhancements**: Added display of comprehensive payment options (EMI, UPI, Net Banking, Cards).
 - **Bespoke Feature Suite**: Added modular `ClothingBouquet`, `DigitalPassport`, and `DigitalAtelier` components. Added `/bespoke` showcase route.
 - **Bug Fixes**: Resolved unused variable warnings (`notFound`), replaced `<img>` tags with Next.js `<Image />` component for better core web vitals, and fixed explicit `any` types in `Magnetic.tsx`.
 - **SEO Improvements**: Improved structural elements for search engines by optimizing Next.js `Image` component which prevents layout shifts and improves LCP.

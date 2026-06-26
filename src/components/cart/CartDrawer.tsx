@@ -156,8 +156,19 @@ export default function CartDrawer() {
                     Proceed to Checkout
                   </button>
 
-                  <div className="flex items-center justify-center gap-2 text-peach/40 text-[9px] tracking-widest uppercase">
-                    <ShieldCheck size={12} /> Secure Checkout by Shopify
+                  <div className="flex flex-col items-center justify-center gap-3">
+                    <div className="flex items-center gap-2 text-peach/40 text-[9px] tracking-widest uppercase">
+                      <ShieldCheck size={12} /> Secure Checkout by Shopify
+                    </div>
+                    
+                    {/* Payment Options */}
+                    <div className="flex items-center gap-2 text-peach/30 text-[8px] tracking-[0.2em] uppercase">
+                      <span>Credit Card</span> &middot;
+                      <span>Debit Card</span> &middot;
+                      <span>EMI</span> &middot;
+                      <span>UPI</span> &middot;
+                      <span>Net Banking</span>
+                    </div>
                   </div>
                 </div>
               </div>
