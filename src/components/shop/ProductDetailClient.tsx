@@ -40,9 +40,9 @@ export default function ProductDetailClient({ product }: { product: Product }) {
         {/* Breadcrumbs */}
         <Breadcrumbs
           items={[
-            { label: 'Home', href: 'https://luxethread.com' },
-            { label: 'Collections', href: 'https://luxethread.com/shop' },
-            { label: product.name },
+            { label: 'Home', href: '/' },
+            { label: 'Collections', href: '/shop' },
+            { label: product.name, href: `/shop/${product.handle}` },
           ]}
         />
 

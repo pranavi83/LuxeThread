@@ -1,6 +1,6 @@
 'use client';
 
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 
 export type CartItem = {
   id: string;
@@ -28,6 +28,25 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 export function CartProvider({ children }: { children: React.ReactNode }) {
   const [cart, setCart] = useState<CartItem[]>([]);
   const [isOpen, setIsOpen] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem('luxe-thread-cart');
+      if (saved) {
+        setCart(JSON.parse(saved));
+      }
+    } catch (e) {
+      console.error('Failed to parse cart from local storage', e);
+    }
+    setIsLoaded(true);
+  }, []);
+
+  useEffect(() => {
+    if (isLoaded) {
+      localStorage.setItem('luxe-thread-cart', JSON.stringify(cart));
+    }
+  }, [cart, isLoaded]);
 
   const openCart = () => setIsOpen(true);
   const closeCart = () => setIsOpen(false);

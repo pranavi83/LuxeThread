@@ -5,10 +5,12 @@ import { useToast } from '@/components/common/Toast';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Plus, Minus, Trash2, ShieldCheck } from 'lucide-react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 export default function CartDrawer() {
   const { cart, isOpen, closeCart, updateQuantity, removeItem, cartTotal } = useCart();
   const { showToast } = useToast();
+  const router = useRouter();
 
   return (
     <AnimatePresence>
@@ -149,7 +151,7 @@ export default function CartDrawer() {
                   <button 
                     onClick={() => {
                       closeCart();
-                      window.location.href = '/checkout';
+                      router.push('/checkout');
                     }}
                     className="w-full py-4 bg-peach text-english-blue text-xs font-sans tracking-[0.25em] uppercase font-bold rounded-full border border-peach hover:bg-transparent hover:text-peach transition-all duration-500 hover:scale-[1.02]"
                   >
