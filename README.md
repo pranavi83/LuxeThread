@@ -1,20 +1,27 @@
-# Aero. Zero-Gravity Design System
+# NS Luxe Thread
 
-An experimental interactive landing site that simulates a zero-gravity environment. The design is extremely clean, minimalist, and uncluttered, utilizing a shared zero-g liquid-glass design system and custom JS video crossfading.
+A premium couture and editorial fashion boutique specializing in bespoke handcrafted Indian handloom apparel. Built with a modern tech stack focused on high performance, luxury aesthetics, and seamless user experiences.
 
 ## Tech Stack
 
 - **Framework**: Next.js 16 (App Router)
 - **Styling**: Tailwind CSS v4, Custom CSS Variables
-- **Animations**: Framer Motion (Continuous Levitation & Parallax)
-- **Fonts**: Instrument Serif & Inter
+- **Animations**: GSAP (ScrollTrigger, quickTo), Framer Motion
+- **Icons**: Lucide React
+- **Smooth Scrolling**: Lenis
 
 ## Features
 
-- **Zero-G Liquid-Glass**: Subtle frosted glass components simulating floating UI elements.
-- **Antigravity Mechanics**: Randomized, continuous levitation using Framer Motion.
-- **Abstract Hero**: Custom FadingVideo wrapper implementing seamless video crossfades using `requestAnimationFrame`.
-- **The Void**: Asymmetrical sprawling CSS grid utilizing negative space.
+- **Luxury UI/UX**: Immersive digital experience with custom cursor trails, magnetic buttons, parallax scrolling, and high-end typography (Inter & Cormorant Garamond).
+- **SEO Optimized**: Fully integrated with Next.js dynamic `generateMetadata`, auto-generated XML sitemap, `robots.txt`, and rich structured data schemas (JSON-LD) for Products, Breadcrumbs, and Organization.
+- **Server/Client Architecture**: Optimized component splitting for maximum performance, with interactive elements isolated in Client Components (`'use client'`) and heavy lifting done by Server Components.
+- **Responsive Design**: Flawlessly adapts across all device sizes.
+- **State Management**: React Context API for global cart state.
+
+## Recent Updates
+
+- **Bug Fixes**: Resolved unused variable warnings (`notFound`), replaced `<img>` tags with Next.js `<Image />` component for better core web vitals, and fixed explicit `any` types in `Magnetic.tsx`.
+- **SEO Improvements**: Improved structural elements for search engines by optimizing Next.js `Image` component which prevents layout shifts and improves LCP.
 
 ## Getting Started
 
@@ -40,4 +47,4 @@ npm run build
 
 ---
 
-*Weightless. Transcend the pull.*
+*Craftsmanship that honors heritage, silhouette designed for the digital avant-garde.*

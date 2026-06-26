@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
-import { Inter, Instrument_Serif } from 'next/font/google';
+import { Inter, Cormorant_Garamond } from 'next/font/google';
 import SmoothScroll from '@/components/common/SmoothScroll';
 import CustomCursor from '@/components/common/CustomCursor';
+import Header from '@/components/common/Header';
+import Footer from '@/components/common/Footer';
 import { CartProvider } from '@/context/CartContext';
 import { ToastProvider } from '@/components/common/Toast';
 import JsonLd from '@/components/seo/JsonLd';
@@ -13,11 +15,11 @@ const inter = Inter({
   display: 'swap',
 });
 
-const instrument = Instrument_Serif({
+const cormorant = Cormorant_Garamond({
   variable: '--font-serif',
-  weight: ['400'],
-  style: ['normal', 'italic'],
   subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  style: ['normal', 'italic'],
   display: 'swap',
 });
 
@@ -80,7 +82,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${instrument.variable} h-full antialiased`}
+      className={`${inter.variable} ${cormorant.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-english-blue text-peach selection:bg-peach selection:text-english-blue overflow-x-hidden font-sans">
         <JsonLd data={organizationJsonLd} />
@@ -88,7 +90,9 @@ export default function RootLayout({
           <CartProvider>
             <SmoothScroll>
               <CustomCursor />
+              <Header />
               <main className="flex-grow">{children}</main>
+              <Footer />
             </SmoothScroll>
           </CartProvider>
         </ToastProvider>

@@ -2,18 +2,16 @@
 
 @theme {
   /* High-end luxury palette upgrade */
-  --color-english-blue: #141f2d;      /* English Blue */
+  --color-english-blue: #070B13;      /* Deep Midnight Ink Blue */
   --color-slate-blue: #0E1524;        /* Rich Slate Ink Blue */
   --color-peach: #F7EDE2;             /* Luxurious Champagne Peach / Nude Cream */
   --color-gold-accent: #C5A376;       /* Burnished Muted Gold */
   --font-sans: var(--font-sans);
-  --font-heading: var(--font-serif);
   --font-serif: var(--font-serif);
-  --radius: 9999px;
 }
 
 :root {
-  --background: #141f2d;
+  --background: #070B13;
   --foreground: #F7EDE2;
 }
 
@@ -87,21 +85,5 @@ body {
 /* Firefox scrollbar support */
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgba(247, 237, 226, 0.15) #141f2d;
-}
-
-/* Zero-G Liquid-Glass Utilities */
-.zero-g-glass {
-  background: rgba(255, 218, 185, 0.04); /* Ultra-sheer peach tint */
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 218, 185, 0.1);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.1);
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-.zero-g-glass:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  scrollbar-color: rgba(247, 237, 226, 0.15) #070B13;
 }
