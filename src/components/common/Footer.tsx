@@ -49,7 +49,6 @@ export default function Footer() {
 
       <div className="w-full max-w-7xl flex flex-col sm:flex-row justify-between items-center text-[8px] tracking-[0.25em] uppercase text-peach/30 gap-4">
         <span>&copy; {new Date().getFullYear()} NS Luxe Thread. All Rights Reserved.</span>
-        <span className="text-gold-accent/40">₹10L CUSTOM RUNWAY COLLECTIVE</span>
       </div>
     </footer>
   );
