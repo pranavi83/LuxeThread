@@ -24,6 +24,9 @@ export default function Header() {
             <Link href="/shop" className="hover:text-peach transition-colors duration-300">
               Collections
             </Link>
+            <Link href="/bespoke" className="hover:text-peach transition-colors duration-300">
+              Bespoke
+            </Link>
             <Link href="/#story" className="hover:text-peach transition-colors duration-300">
               Our Story
             </Link>
@@ -122,6 +125,20 @@ export default function Header() {
                   className="hover:italic hover:text-peach/80 transition-all block py-2 border-b border-peach/5"
                 >
                   Collections
+                </Link>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.30 }}
+              >
+                <Link 
+                  href="/bespoke" 
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="hover:italic hover:text-peach/80 transition-all block py-2 border-b border-peach/5"
+                >
+                  Bespoke
                 </Link>
               </motion.div>
 

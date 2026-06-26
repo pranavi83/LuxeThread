@@ -29,6 +29,8 @@ A premium couture and editorial fashion boutique specializing in bespoke handcra
 - **Checkout & Footer Enhancements**: Added display of comprehensive payment options (EMI, UPI, Net Banking, Cards).
 - **Bespoke Feature Suite**: Added modular `ClothingBouquet`, `DigitalPassport`, and `DigitalAtelier` components. Added `/bespoke` showcase route.
 - **Bug Fixes**: 
+  - Fixed a critical state-loss bug during checkout where a hard page reload cleared the cart contents; cart state is now persisted across sessions using local storage and smooth client-side routing using Next.js `useRouter`.
+  - Fixed an issue where the Breadcrumbs on the product detail pages used absolute URLs which navigated users away from the application.
   - Fixed a major UI bug where the Cart Drawer would not open on pages other than the homepage by elevating the `CartDrawer` component to the global `layout.tsx`.
   - Resolved unused variable warnings (`notFound`), replaced `<img>` tags with Next.js `<Image />` component for better core web vitals, and fixed explicit `any` types in `Magnetic.tsx`.
 - **SEO Improvements**: Improved structural elements for search engines by optimizing Next.js `Image` component which prevents layout shifts and improves LCP.

@@ -22,6 +22,10 @@ export default function Footer() {
               Collections
               <span className="absolute -bottom-1 left-0 w-0 h-[0.5px] bg-gold-accent group-hover:w-full transition-all duration-500" />
             </Link>
+            <Link href="/bespoke" className="hover:text-gold-accent transition-colors duration-300 relative group">
+              Bespoke
+              <span className="absolute -bottom-1 left-0 w-0 h-[0.5px] bg-gold-accent group-hover:w-full transition-all duration-500" />
+            </Link>
             <Link href="/#lookbook" className="hover:text-gold-accent transition-colors duration-300 relative group">
               Lookbook
               <span className="absolute -bottom-1 left-0 w-0 h-[0.5px] bg-gold-accent group-hover:w-full transition-all duration-500" />

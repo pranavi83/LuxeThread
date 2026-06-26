@@ -3,17 +3,19 @@
 import { useCart } from '@/context/CartContext';
 import { useToast } from '@/components/common/Toast';
 import { useState } from 'react';
-import { ShoppingBag, ShieldCheck, Truck, RotateCcw } from 'lucide-react';
+import { ShoppingBag, ShieldCheck, Truck, RotateCcw, X } from 'lucide-react';
 import Magnetic from '@/components/common/Magnetic';
 import Breadcrumbs from '@/components/common/Breadcrumbs';
 import Image from 'next/image';
 import type { Product } from '@/utils/products';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function ProductDetailClient({ product }: { product: Product }) {
   const { addItem } = useCart();
   const { showToast } = useToast();
   const [selectedSize, setSelectedSize] = useState<string>('');
   const [activeImageIndex, setActiveImageIndex] = useState<number>(0);
+  const [isSizeGuideOpen, setIsSizeGuideOpen] = useState(false);
 
   // Bespoke Fabric Magnification States
   const [zoomPos, setZoomPos] = useState({ x: 0, y: 0 });
@@ -143,7 +145,10 @@ export default function ProductDetailClient({ product }: { product: Product }) {
                 <span className="text-[9px] tracking-[0.25em] uppercase text-peach/50 font-semibold">
                   Select Size
                 </span>
-                <span className="text-[9px] tracking-[0.25em] uppercase text-gold-accent/50 font-light underline cursor-pointer hover:text-gold-accent/80 transition-colors">
+                <span 
+                  onClick={() => setIsSizeGuideOpen(true)}
+                  className="text-[9px] tracking-[0.25em] uppercase text-gold-accent/50 font-light underline cursor-pointer hover:text-gold-accent/80 transition-colors"
+                >
                   Size Guide
                 </span>
               </div>
