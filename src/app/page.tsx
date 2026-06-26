@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import Hero from '@/components/home/Hero';
 import Lookbook from '@/components/home/Lookbook';
-import CartDrawer from '@/components/cart/CartDrawer';
 import Preloader from '@/components/common/Preloader';
 import RunwayTicker from '@/components/home/RunwayTicker';
 import Newsletter from '@/components/home/Newsletter';
@@ -42,9 +41,6 @@ export default function Home() {
 
       {/* Newsletter / Email Capture */}
       <Newsletter />
-
-      {/* Cart Drawer Portal overlay */}
-      <CartDrawer />
 
       {/* Footer is now rendered in layout.tsx for all pages */}
     </div>

@@ -4,6 +4,7 @@ import SmoothScroll from '@/components/common/SmoothScroll';
 import CustomCursor from '@/components/common/CustomCursor';
 import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
+import CartDrawer from '@/components/cart/CartDrawer';
 import { CartProvider } from '@/context/CartContext';
 import { ToastProvider } from '@/components/common/Toast';
 import JsonLd from '@/components/seo/JsonLd';
@@ -93,6 +94,7 @@ export default function RootLayout({
               <Header />
               <main className="flex-grow">{children}</main>
               <Footer />
+              <CartDrawer />
             </SmoothScroll>
           </CartProvider>
         </ToastProvider>
