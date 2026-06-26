@@ -25,6 +25,7 @@ A premium couture and editorial fashion boutique specializing in bespoke handcra
 
 ## Recent Updates
 
+- **Integrated Checkout Experience**: Added a dedicated `/checkout` route allowing users to view their cart and simulate checkout using localized payment gateways (Cards, UPI, EMI, Net Banking).
 - **Checkout & Footer Enhancements**: Added display of comprehensive payment options (EMI, UPI, Net Banking, Cards).
 - **Bespoke Feature Suite**: Added modular `ClothingBouquet`, `DigitalPassport`, and `DigitalAtelier` components. Added `/bespoke` showcase route.
 - **Bug Fixes**: Resolved unused variable warnings (`notFound`), replaced `<img>` tags with Next.js `<Image />` component for better core web vitals, and fixed explicit `any` types in `Magnetic.tsx`.

@@ -148,8 +148,8 @@ export default function CartDrawer() {
                   {/* Checkout Button */}
                   <button 
                     onClick={() => {
-                      showToast('Proceeding to premium secure checkout...', 'success');
                       closeCart();
+                      window.location.href = '/checkout';
                     }}
                     className="w-full py-4 bg-peach text-english-blue text-xs font-sans tracking-[0.25em] uppercase font-bold rounded-full border border-peach hover:bg-transparent hover:text-peach transition-all duration-500 hover:scale-[1.02]"
                   >
